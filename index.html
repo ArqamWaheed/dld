@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 1 – Digital Logic Design Practice</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.7;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 30px;
+      border-bottom: 2px solid #334155;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+
+    .section {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 28px;
+      border: 1px solid #334155;
+    }
+
+    .section h2 {
+      font-size: 1.3rem;
+      color: #38bdf8;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+    }
+
+    .question {
+      background: #0f172a;
+      border-left: 4px solid #38bdf8;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+    }
+
+    .question span.qnum {
+      color: #7dd3fc;
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    .question p {
+      color: #cbd5e1;
+      display: inline;
+    }
+
+    /* Answer Key */
+    .answer-key-wrapper {
+      margin-top: 50px;
+      margin-bottom: 40px;
+    }
+
+    .answer-toggle-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: #38bdf8;
+      color: #0f172a;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      margin-bottom: 16px;
+      transition: background 0.25s;
+    }
+
+    .answer-toggle-btn:hover { background: #7dd3fc; }
+
+    .answer-key {
+      display: none;
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 28px;
+      border: 1px solid #334155;
+    }
+
+    .answer-key h2 {
+      font-size: 1.3rem;
+      color: #38bdf8;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+    }
+
+    .answer-key ol {
+      padding-left: 22px;
+    }
+
+    .answer-key ol li {
+      color: #cbd5e1;
+      margin-bottom: 10px;
+    }
+
+    .answer-key ol li strong {
+      color: #7dd3fc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #475569;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Chapter 1 – DLD Practice</h1>
+      <p>EE-223 Digital Logic Design &nbsp;|&nbsp; Quick revision questions</p>
+    </header>
+
+    <!-- Section 1 -->
+    <div class="section">
+      <h2>1. Number Systems &amp; Conversions</h2>
+
+      <div class="question">
+        <span class="qnum">Q1.</span>
+        <p>Convert <strong>(101101.11)<sub>2</sub></strong> to decimal.</p>
+      </div>
+
+      <div class="question">
+        <span class="qnum">Q2.</span>
+        <p>Convert <strong>(255)<sub>10</sub></strong> to binary, octal, and hexadecimal.</p>
+      </div>
+
+      <div class="question">
+        <span class="qnum">Q3.</span>
+        <p>Group binary digits to convert <strong>(11010110)<sub>2</sub></strong> to octal and hexadecimal directly.</p>
+      </div>
+
+      <div class="question">
+        <span class="qnum">Q4.</span>
+        <p>Convert <strong>(0.6875)<sub>10</sub></strong> to binary using repeated multiplication.</p>
+      </div>
+
+      <div class="question">
+        <span class="qnum">Q5.</span>
+        <p>Find the unknown radix <em>r</em> if <strong>(13)<sub>r</sub> = (7)<sub>10</sub></strong>.</p>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <h2>2. Binary Codes &amp; Logic</h2>
+
+      <div class="question">
+        <span class="qnum">Q6.</span>
+        <p>Express <strong>394</strong> in BCD. Add BCD 0111 + 0110 and correct if needed.</p>
+      </div>
+
+      <div class="question">
+        <span class="qnum">Q7.</span>
+        <p>Convert decimal <strong>6</strong> to Gray code and explain why only one bit changes per step.</p>
+      </div>
+
+      <div class="question">
+        <span class="qnum">Q8.</span>
+        <p>A 7-bit ASCII character has even parity. If 3 bits are 1, what is the parity bit?</p>
+      </div>
+
+      <div class="question">
+        <span class="qnum">Q9.</span>
+        <p>Give the truth-table outputs for: AND, OR, NOT when inputs are A=1, B=0.</p>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+      <h2>3. Complements &amp; Subtraction</h2>
+
+      <div class="question">
+        <span class="qnum">Q10.</span>
+        <p>Find the 1's complement and 2's complement of <strong>(10110100)<sub>2</sub></strong>.</p>
+      </div>
+
+      <div class="question">
+        <span class="qnum">Q11.</span>
+        <p>Find the 9's complement and 10's complement of <strong>3728</strong>.</p>
+      </div>
+
+      <div class="question">
+        <span class="qnum">Q12.</span>
+        <p>Subtract using 2's complement: <strong>1010 − 0110</strong>. Identify the end carry.</p>
+      </div>
+
+      <div class="question">
+        <span class="qnum">Q13.</span>
+        <p>Subtract using 1's complement: <strong>1010 − 1100</strong>. Apply end-around carry if present.</p>
+      </div>
+
+      <div class="question">
+        <span class="qnum">Q14.</span>
+        <p>Subtract 10's complement: <strong>52 − 79</strong>. What is the sign and value of the result?</p>
+      </div>
+    </div>
+
+    <!-- Answer Key -->
+    <div class="answer-key-wrapper">
+      <button class="answer-toggle-btn" onclick="toggleAnswers()">▶ Show Answer Key</button>
+      <div class="answer-key" id="answerKey">
+        <h2>Answer Key</h2>
+        <ol>
+          <li><strong>Q1.</strong> 32 + 8 + 4 + 1 + 0.5 + 0.25 = <strong>45.75</strong></li>
+          <li><strong>Q2.</strong> Binary: 11111111 &nbsp;|&nbsp; Octal: 377 &nbsp;|&nbsp; Hex: FF</li>
+          <li><strong>Q3.</strong> Group 3s → 011 010 110 = <strong>(326)<sub>8</sub></strong>; Group 4s → 1101 0110 = <strong>(D6)<sub>16</sub></strong></li>
+          <li><strong>Q4.</strong> 0.6875 × 2 → 0.1011 → <strong>(0.1011)<sub>2</sub></strong></li>
+          <li><strong>Q5.</strong> 1·r + 3 = 7 → r = <strong>4</strong></li>
+          <li><strong>Q6.</strong> 394 in BCD: 0011 1001 0100. &nbsp;0111 + 0110 = 1101 (invalid) → add 0110 → <strong>0001 0011</strong> (carry + 3)</li>
+          <li><strong>Q7.</strong> Decimal 6 = 0110 binary → XOR with shifted = <strong>0101</strong> Gray. Adjacent codes differ by exactly 1 bit (unit-distance property).</li>
+          <li><strong>Q8.</strong> Three 1s are odd; need one more 1 to make even → parity bit = <strong>1</strong></li>
+          <li><strong>Q9.</strong> AND = 0 &nbsp;|&nbsp; OR = 1 &nbsp;|&nbsp; NOT(A) = 0</li>
+          <li><strong>Q10.</strong> 1's complement: <strong>01001011</strong> &nbsp;|&nbsp; 2's complement: <strong>01001100</strong></li>
+          <li><strong>Q11.</strong> 9's complement: 9999 − 3728 = <strong>6271</strong> &nbsp;|&nbsp; 10's complement: <strong>6272</strong></li>
+          <li><strong>Q12.</strong> 2's comp of 0110 = 1010. &nbsp;1010 + 1010 = 1<strong>0100</strong>. End carry discarded → result = <strong>0100</strong> (+4 ✓)</li>
+          <li><strong>Q13.</strong> 1's comp of 1100 = 0011. &nbsp;1010 + 0011 = 1101. No end carry → take 1's comp → 0010, result = <strong>−0010</strong> (−2 ✓)</li>
+          <li><strong>Q14.</strong> 10's comp of 79 = 21. &nbsp;52 + 21 = 73, no end carry → result is in complement form → 10's comp of 73 = 27, result = <strong>−27</strong></li>
+        </ol>
+      </div>
+    </div>
+
+    <footer>EE-223 DLD · Chapter 1 · Spring 2026</footer>
+  </div>
+
+  <script>
+    function toggleAnswers() {
+      var key = document.getElementById('answerKey');
+      var btn = document.querySelector('.answer-toggle-btn');
+      if (key.style.display === 'block') {
+        key.style.display = 'none';
+        btn.textContent = '▶ Show Answer Key';
+      } else {
+        key.style.display = 'block';
+        btn.textContent = '▼ Hide Answer Key';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -119,11 +119,21 @@
 
     .answer-key ol li {
       color: #cbd5e1;
-      margin-bottom: 10px;
+      margin-bottom: 16px;
+      line-height: 1.8;
     }
 
     .answer-key ol li strong {
       color: #7dd3fc;
+    }
+
+    .answer-key ol li .step {
+      display: block;
+      margin-top: 4px;
+      padding-left: 12px;
+      border-left: 2px solid #334155;
+      font-size: 0.9rem;
+      color: #94a3b8;
     }
 
     footer {
@@ -138,7 +148,7 @@
   <div class="container">
     <header>
       <h1>Chapter 1 – DLD Practice</h1>
-      <p>EE-223 Digital Logic Design &nbsp;|&nbsp; Quick revision questions</p>
+      <p>EE-223 Digital Logic Design &nbsp;|&nbsp; Exam-style questions</p>
     </header>
 
     <!-- Section 1 -->
@@ -147,27 +157,22 @@
 
       <div class="question">
         <span class="qnum">Q1.</span>
-        <p>Convert <strong>(101101.11)<sub>2</sub></strong> to decimal.</p>
+        <p>Convert <strong>101101.011<sub>2</sub></strong> to octal and hexadecimal using binary grouping only (no decimal step). Show your padding and groupings.</p>
       </div>
 
       <div class="question">
         <span class="qnum">Q2.</span>
-        <p>Convert <strong>(255)<sub>10</sub></strong> to binary, octal, and hexadecimal.</p>
+        <p>Convert <strong>(3B7.A)<sub>16</sub></strong> to decimal. Then convert only the integer part of your result to binary using repeated division. Show working for both steps.</p>
       </div>
 
       <div class="question">
         <span class="qnum">Q3.</span>
-        <p>Group binary digits to convert <strong>(11010110)<sub>2</sub></strong> to octal and hexadecimal directly.</p>
+        <p>Perform <strong>(4052)<sub>8</sub> &minus; (1367)<sub>8</sub></strong> entirely in octal, borrowing in groups of 8. Verify by converting both operands to decimal.</p>
       </div>
 
       <div class="question">
         <span class="qnum">Q4.</span>
-        <p>Convert <strong>(0.6875)<sub>10</sub></strong> to binary using repeated multiplication.</p>
-      </div>
-
-      <div class="question">
-        <span class="qnum">Q5.</span>
-        <p>Find the unknown radix <em>r</em> if <strong>(13)<sub>r</sub> = (7)<sub>10</sub></strong>.</p>
+        <p>Find the unknown base <em>r</em> in <strong>(121)<sub>r</sub> = (36)<sub>10</sub></strong>. State the minimum value <em>r</em> must satisfy for all digits in (121)<sub>r</sub> to be valid.</p>
       </div>
     </div>
 
@@ -176,23 +181,23 @@
       <h2>2. Binary Codes &amp; Logic</h2>
 
       <div class="question">
+        <span class="qnum">Q5.</span>
+        <p>Add BCD <strong>78 + 65</strong> digit by digit. Identify each 4-bit group that requires the +0110 correction, apply it, and state the final BCD result with its decimal equivalent.</p>
+      </div>
+
+      <div class="question">
         <span class="qnum">Q6.</span>
-        <p>Express <strong>394</strong> in BCD. Add BCD 0111 + 0110 and correct if needed.</p>
+        <p>Convert <strong>110101<sub>2</sub></strong> to Gray code, then convert the Gray code back to binary. Briefly explain one hardware application where the single-bit-change property prevents faults.</p>
       </div>
 
       <div class="question">
         <span class="qnum">Q7.</span>
-        <p>Convert decimal <strong>6</strong> to Gray code and explain why only one bit changes per step.</p>
+        <p>The 7-bit ASCII for 'M' is <strong>1001101</strong>. Write the full even-parity 8-bit codeword. The receiver captures <strong>11001010</strong>. Does the parity check flag an error? Why does this expose the fundamental limitation of single-bit parity?</p>
       </div>
 
       <div class="question">
         <span class="qnum">Q8.</span>
-        <p>A 7-bit ASCII character has even parity. If 3 bits are 1, what is the parity bit?</p>
-      </div>
-
-      <div class="question">
-        <span class="qnum">Q9.</span>
-        <p>Give the truth-table outputs for: AND, OR, NOT when inputs are A=1, B=0.</p>
+        <p>Evaluate <strong>F = (A AND B) OR (NOT C)</strong> for A=1, B=0, C=1. If only C flips to 0, does F change? Which sub-expression now dominates the output, and why?</p>
       </div>
     </div>
 
@@ -201,28 +206,23 @@
       <h2>3. Complements &amp; Subtraction</h2>
 
       <div class="question">
+        <span class="qnum">Q9.</span>
+        <p>Using 8-bit 2's complement, compute <strong>01001010<sub>2</sub> &minus; 00110101<sub>2</sub></strong>. Show the complement calculation, the full addition, and explain what the presence of an end carry indicates about the result's sign.</p>
+      </div>
+
+      <div class="question">
         <span class="qnum">Q10.</span>
-        <p>Find the 1's complement and 2's complement of <strong>(10110100)<sub>2</sub></strong>.</p>
+        <p>Compute <strong>10110<sub>2</sub> &minus; 01101<sub>2</sub></strong> using 1's complement (5-bit). Apply end-around carry if it arises. Can a second end-around carry ever occur from that final addition? Justify briefly.</p>
       </div>
 
       <div class="question">
         <span class="qnum">Q11.</span>
-        <p>Find the 9's complement and 10's complement of <strong>3728</strong>.</p>
+        <p>Compute <strong>1563 &minus; 3274</strong> using 10's complement (4-digit). Show all steps and explain what the absence of an end carry tells you about the sign and how to recover the magnitude.</p>
       </div>
 
       <div class="question">
         <span class="qnum">Q12.</span>
-        <p>Subtract using 2's complement: <strong>1010 − 0110</strong>. Identify the end carry.</p>
-      </div>
-
-      <div class="question">
-        <span class="qnum">Q13.</span>
-        <p>Subtract using 1's complement: <strong>1010 − 1100</strong>. Apply end-around carry if present.</p>
-      </div>
-
-      <div class="question">
-        <span class="qnum">Q14.</span>
-        <p>Subtract 10's complement: <strong>52 − 79</strong>. What is the sign and value of the result?</p>
+        <p>Compute <strong>8537 &minus; 2391</strong> using 9's complement (4-digit). Identify the end carry and end-around carry step. Then explain why 10's complement avoids this extra step while 9's complement requires it.</p>
       </div>
     </div>
 
@@ -232,20 +232,79 @@
       <div class="answer-key" id="answerKey">
         <h2>Answer Key</h2>
         <ol>
-          <li><strong>Q1.</strong> 32 + 8 + 4 + 1 + 0.5 + 0.25 = <strong>45.75</strong></li>
-          <li><strong>Q2.</strong> Binary: 11111111 &nbsp;|&nbsp; Octal: 377 &nbsp;|&nbsp; Hex: FF</li>
-          <li><strong>Q3.</strong> Group 3s → 011 010 110 = <strong>(326)<sub>8</sub></strong>; Group 4s → 1101 0110 = <strong>(D6)<sub>16</sub></strong></li>
-          <li><strong>Q4.</strong> 0.6875 × 2 → 0.1011 → <strong>(0.1011)<sub>2</sub></strong></li>
-          <li><strong>Q5.</strong> 1·r + 3 = 7 → r = <strong>4</strong></li>
-          <li><strong>Q6.</strong> 394 in BCD: 0011 1001 0100. &nbsp;0111 + 0110 = 1101 (invalid) → add 0110 → <strong>0001 0011</strong> (carry + 3)</li>
-          <li><strong>Q7.</strong> Decimal 6 = 0110 binary → XOR with shifted = <strong>0101</strong> Gray. Adjacent codes differ by exactly 1 bit (unit-distance property).</li>
-          <li><strong>Q8.</strong> Three 1s are odd; need one more 1 to make even → parity bit = <strong>1</strong></li>
-          <li><strong>Q9.</strong> AND = 0 &nbsp;|&nbsp; OR = 1 &nbsp;|&nbsp; NOT(A) = 0</li>
-          <li><strong>Q10.</strong> 1's complement: <strong>01001011</strong> &nbsp;|&nbsp; 2's complement: <strong>01001100</strong></li>
-          <li><strong>Q11.</strong> 9's complement: 9999 − 3728 = <strong>6271</strong> &nbsp;|&nbsp; 10's complement: <strong>6272</strong></li>
-          <li><strong>Q12.</strong> 2's comp of 0110 = 1010. &nbsp;1010 + 1010 = 1<strong>0100</strong>. End carry discarded → result = <strong>0100</strong> (+4 ✓)</li>
-          <li><strong>Q13.</strong> 1's comp of 1100 = 0011. &nbsp;1010 + 0011 = 1101. No end carry → take 1's comp → 0010, result = <strong>−0010</strong> (−2 ✓)</li>
-          <li><strong>Q14.</strong> 10's comp of 79 = 21. &nbsp;52 + 21 = 73, no end carry → result is in complement form → 10's comp of 73 = 27, result = <strong>−27</strong></li>
+          <li>
+            <strong>Q1.</strong>
+            <span class="step">Octal — pad to 3-bit groups from radix point: 101|101 . 011 &rarr; <strong>55.3<sub>8</sub></strong></span>
+            <span class="step">Hex — pad to 4-bit groups: 0010|1101 . 0110 &rarr; <strong>2D.6<sub>16</sub></strong></span>
+          </li>
+          <li>
+            <strong>Q2.</strong>
+            <span class="step">Decimal: 3&times;256 + 11&times;16 + 7 + 10&divide;16 = 768+176+7+0.625 = <strong>951.625<sub>10</sub></strong></span>
+            <span class="step">951 &divide; 2 (remainders LSB&rarr;MSB): 1,1,1,0,1,1,0,1,1,1 &rarr; <strong>1110110111<sub>2</sub></strong></span>
+            <span class="step">Verify: 512+256+128+32+16+4+2+1 = 951 &#10003;</span>
+          </li>
+          <li>
+            <strong>Q3.</strong>
+            <span class="step">Col 0: 2&minus;7 &rarr; borrow: (2+8)&minus;7 = 3, borrow out 1</span>
+            <span class="step">Col 1: (5&minus;1)&minus;6 &rarr; borrow: (4+8)&minus;6 = 6, borrow out 1</span>
+            <span class="step">Col 2: (0&minus;1)&minus;3 &rarr; borrow: (0+8)&minus;1&minus;3 = 4, borrow out 1</span>
+            <span class="step">Col 3: 4&minus;1&minus;1 = 2 &rarr; result = <strong>(2463)<sub>8</sub></strong></span>
+            <span class="step">Verify: 4052<sub>8</sub>=2090<sub>10</sub>, 1367<sub>8</sub>=759<sub>10</sub>; 2090&minus;759=1331=2&times;512+4&times;64+6&times;8+3 = 2463<sub>8</sub> &#10003;</span>
+          </li>
+          <li>
+            <strong>Q4.</strong>
+            <span class="step">r&sup2;+2r+1 = 36 &rarr; (r+1)&sup2; = 36 &rarr; r+1 = 6 &rarr; <strong>r = 5</strong></span>
+            <span class="step">Digit constraint: largest digit in (121)<sub>r</sub> is 2, so r &gt; 2 is required. r=5 satisfies this.</span>
+          </li>
+          <li>
+            <strong>Q5.</strong>
+            <span class="step">Ones: 1000+0101 = 1101 (13 &gt; 9, invalid) &rarr; +0110 &rarr; 1 0011; digit=3, carry=1</span>
+            <span class="step">Tens: 0111+0110+0001(carry) = 1110 (14 &gt; 9, invalid) &rarr; +0110 &rarr; 1 0100; digit=4, carry=1</span>
+            <span class="step">Hundreds: carry=1 &rarr; 0001. Final BCD: <strong>0001 0100 0011 = 143</strong> (78+65=143 &#10003;)</span>
+          </li>
+          <li>
+            <strong>Q6.</strong>
+            <span class="step">Binary&rarr;Gray (B<sub>0</sub>=MSB; G<sub>0</sub>=B<sub>0</sub>; G<sub>i</sub>=B<sub>i&minus;1</sub>&oplus;B<sub>i</sub>): 1,1&oplus;1=0,1&oplus;0=1,0&oplus;1=1,1&oplus;0=1,0&oplus;1=1 &rarr; <strong>101111</strong></span>
+            <span class="step">Gray&rarr;Binary (B<sub>0</sub>=G<sub>0</sub>; B<sub>i</sub>=B<sub>i&minus;1</sub>&oplus;G<sub>i</sub>): 1,1,0,1,0,1 &rarr; <strong>110101</strong> &#10003;</span>
+            <span class="step">Application: rotary/shaft encoders — only one bit changes per position step, so a misread mid-transition causes at most a &plusmn;1 error instead of a large erroneous jump.</span>
+          </li>
+          <li>
+            <strong>Q7.</strong>
+            <span class="step">1001101 has four 1-bits (even) &rarr; even parity bit = 0 &rarr; sent codeword: <strong>01001101</strong></span>
+            <span class="step">Received 11001010: count 1-bits = 4 (even) &rarr; parity check <strong>passes — no error flagged</strong>.</span>
+            <span class="step">Yet the data differs from what was sent (two bits were flipped). Single-bit parity only detects an odd number of errors; any even number of flips preserves the parity and goes undetected.</span>
+          </li>
+          <li>
+            <strong>Q8.</strong>
+            <span class="step">F = (1 AND 0) OR (NOT 1) = 0 OR 0 = <strong>0</strong></span>
+            <span class="step">C&rarr;0: F = (1 AND 0) OR (NOT 0) = 0 OR 1 = <strong>1</strong>. Yes, F changes.</span>
+            <span class="step">NOT&nbsp;C dominates because (A AND B) is locked to 0 (B=0 forces AND to 0 regardless of A), so F reduces entirely to NOT&nbsp;C.</span>
+          </li>
+          <li>
+            <strong>Q9.</strong>
+            <span class="step">2's complement of 00110101: flip &rarr; 11001010; +1 &rarr; <strong>11001011</strong></span>
+            <span class="step">01001010 + 11001011 = 1|00010101 (9-bit sum)</span>
+            <span class="step">End carry = 1 &rarr; discard &rarr; result = <strong>00010101 = 21<sub>10</sub></strong> (74&minus;53=21 &#10003;)</span>
+            <span class="step">End carry present &rArr; M &ge; N, result is positive and correct as-is.</span>
+          </li>
+          <li>
+            <strong>Q10.</strong>
+            <span class="step">1's complement of 01101: <strong>10010</strong></span>
+            <span class="step">10110 + 10010 = 1|01000. End carry present &rarr; discard, add 1 (end-around): 01000+1 = <strong>01001 = 9<sub>10</sub></strong> (22&minus;13=9 &#10003;)</span>
+            <span class="step">Second end-around carry? The end-around step adds 1 to a result &le; 11110<sub>2</sub>. The only dangerous case would be 11111+1=100000, but 11111 represents &minus;0 in 1's complement. For subtraction M&minus;N with M &gt; N the result is always positive (never &minus;0), and M=N yields +0 (00000). So the 11111 intermediate state cannot arise, and no second carry can occur.</span>
+          </li>
+          <li>
+            <strong>Q11.</strong>
+            <span class="step">10's complement of 3274: 10000&minus;3274 = <strong>6726</strong></span>
+            <span class="step">1563 + 6726 = <strong>8289</strong>. No end carry (8289 &lt; 10000) &rarr; result is negative.</span>
+            <span class="step">Take 10's complement of 8289: 10000&minus;8289 = 1711. Result = <strong>&minus;1711</strong> (1563&minus;3274=&minus;1711 &#10003;)</span>
+          </li>
+          <li>
+            <strong>Q12.</strong>
+            <span class="step">9's complement of 2391: 9999&minus;2391 = <strong>7608</strong></span>
+            <span class="step">8537 + 7608 = <strong>16145</strong>. End carry present &rarr; discard leading 1 &rarr; 6145; add end-around carry: 6145+1 = <strong>6146</strong> (8537&minus;2391=6146 &#10003;)</span>
+            <span class="step">Why 10's complement skips this: the (r&minus;1)'s complement of N equals r<sup>n</sup>&minus;1&minus;N. So M+(r<sup>n</sup>&minus;1&minus;N) = (M&minus;N)+(r<sup>n</sup>&minus;1). After discarding the end carry you obtain M&minus;N&minus;1, one short of the true result — hence the required +1 (end-around carry). The r's complement of N equals r<sup>n</sup>&minus;N instead, giving M+(r<sup>n</sup>&minus;N) = (M&minus;N)+r<sup>n</sup>. Discarding the end carry leaves exactly M&minus;N — no correction needed.</span>
+          </li>
         </ol>
       </div>
     </div>
